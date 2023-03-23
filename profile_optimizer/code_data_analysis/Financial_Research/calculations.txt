@@ -1,0 +1,124 @@
+calculating portfolio weights: weight = stock's value/total portfolio value * 100
+                              : calculate by dividing the value of a security by total value of the portfolio
+                              Equal weighted portfolio, or market cap weighted portfolio
+
+-------------------------------------------------------------------------------------------------------------
+Portfolio Returns      
+Portfolio Returns: Changes in value over time. Historical avg returns often used to calculate expected return
+The portfolio return will be today's value minus yesterday's value, divided by yesterday's value. 
+
+Portfolio returns: R = Vt -Vt - 1/Vt - 1
+
+# Calculate percentage returns
+returns = data.pct_change()
+(today value - yesterday value/yesterday value, returns = df.pct_change())
+
+# Calculate individual mean returns 
+meanDailyReturns = returns.mean()
+(avg return fr each stock = returns.mean())
+
+# Define weights for the portfolio
+weights = np.array([0.5, 0.2, 0.2, 0.1])
+
+# Calculate expected portfolio performance
+portReturn = np.sum(meanDailyReturns*weights)
+(portfolio return = np.sum(meanDailyReturns*weights))
+
+# Create portfolio returns column
+returns['Portfolio']= returns.dot(weights)
+
+# Calculate cumulative returns
+daily_cum_ret=(1+returns).cumprod()
+
+# Plot the portfolio cumulative returns only
+fig, ax = plt.subplots()
+ax.plot(daily_cum_ret.index, daily_cum_ret.Portfolio, color='purple', label="portfolio")
+ax.xaxis.set_major_locator(matplotlib.dates.YearLocator())
+plt.legend()
+plt.show()
+------------------------------------------------------------------------------------------------------------------
+Measuring risk of a portfolio:
+the variances of the stocks are in the diagonal of the covariance matrix. 
+The variances tell us how much the returns of individual stocks deviate from their mean. 
+Portfolio variance = Weights transposed x (Covariance matrix x Weights)
+
+
+#construct a covariance matrix for the daily returns data
+cov_matrix_d = daily_returns.cov()
+
+#Calculate the variance with the formula
+port_variance = np.dot(weights.T, np.dot(cov_matrix_a, Weights))
+#converting the variance float into a percentage
+
+# Calculate the covariance matrix 
+cov_matrix = (daily_returns.cov())*250
+
+print(str(np.round(port_variance, 3)*100)+ '%)
+
+# Calculate the standard deviation by taking the square root
+port_standard_dev = np.sqrt(np.dot(weights.T, np.dot(cov_matrix, weights)))
+
+# Print the results 
+print(str(np.round(port_standard_dev, 4) * 100) + '%')
+----------------------------------------------------------------------------------------------------------
+Annualized return:
+total_return = (apple_price[-1] - apple_price[0])/apple_price[0]
+
+# Calculate total rate of return from portfolio AUM
+total_return = (pf_AUM[-1] - pf_AUM[0]) / pf_AUM[0]
+
+# Annualize return
+annualized_return = ((1 + total_return)**(12/months))-1
+print (annualized_return)
+
+# Calculate annualized volatility from the standard deviation
+vol_sp500 = returns_sp500.std() * np.sqrt(250)
+---------------------------------------------------------------------------------------------------------
+Risk Adjusted Return: 
+rfr = risk free day
+
+# Calcuate the sharpe ratio
+sharpe_ratio = (annualized_return - risk_free) / annualized_volprint (sharpe_ratio)
+print (sharpe_ratio)
+
+-------------------------------------------------------------------------------------------------------
+Non-normal distribution of returns 
+Skewness:
+Pearson’s Coefficient of Skewness:
+Kurtosis: Fat tailed distribution:
+.mean()
+.std()
+.skew()
+.kurtosis()
+------------------------------------------------------------------------------------------------------------
+Alternative measures of risk:
+upside & downside risk
+Sortino ratio: 
+# Create a downside return series with the negative returns only
+downside_returns = df.loc[df['pf_returns'] < target]
+
+# Calculate expected return and std dev of downside
+expected_return = df['pf_returns'].mean()
+down_stdev = downside_returns['pf_returns'].std()
+
+# Calculate the sortino ratio
+sortino_ratio = (expected_return - rfr)/down_stdev
+
+# Print the results
+print("Expected return  : ", expected_return*100)
+print("Downside risk   : ", down_stdev*100)
+print("Sortino ratio : ", sortino_ratio)
+-----------------------------------------------------------------------------------------------------------
+# Calculate the max value
+roll_max = df.rolling(center=False,min_periods=1,window=252).max()
+
+# Calculate the daily draw-down relative to the max 
+daily_draw_down = df/roll_max - 1
+
+# Plot the results
+plt.figure(figsize=(15,15))
+plt.plot(date, daily_draw_down, label='Daily drawdown')
+plt.plot(date, max_daily_draw_down, label='Maximum daily drawdown in time-window')
+plt.legend()
+plt.show()
+---------------------------------------------------------------------------------------------------------

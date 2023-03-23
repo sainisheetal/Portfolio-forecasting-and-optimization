@@ -1,0 +1,98 @@
+Portfolio: A collection of investments(stocks, bonds, commodities, other funds) owned by individual
+Fund: A pool of investments that is managed by a professional fund manager. Individual investors buy "units of the fund and manager invests the money.
+Index: Sample of market. ie. S&P500, Nasdaq
+Passive investing: following a benchmark as closely as possible
+Active investing: taking active 'bets' that are different from a benchmark
+Long only strategies: small deviations from benchmark
+Hedgefunds: no benchmark but 'total return strategies'
+
+Diversification: It is a strategy that mixes a wide variety of investments within  a portfolio in an attempt to
+                 reduce portfolio risk. Diversification is most often done by investing in different asset classes such 
+                 as stocks, bonds, real estate, or cryptocurrency.
+
+Equal weighted portfolio: The equal weighted portfolio, combines stocks and gives them all the same weight.
+ie: The weights that were used to calculate the portfolio returns over time are [0.25, 0.25, 0,25, 0,25].
+    Here weight are equaly divided.
+
+
+Market-cap weighted portfolio: It creates individual weights based on the size of the companies, measured by market capitalization
+
+Risk-return optimized portfolios:  portfolio has an optimized risk-return trade-off.
+
+Portfolio weight: is the percentage of the total value invested in that particular asset. 
+
+Portfolio Returns: Changes in value over time. Historical avg returns often used to calculate expected return
+The portfolio return will be today's value minus yesterday's value, divided by yesterday's value. 
+Calulations are mentioned in calculation.txt
+
+Cumulative returns: It allows to track total performance over time. 
+
+Portfolio Risk:
+When you invest in stocks, you don't know beforehand what your return will be. 
+Prices go up and down, so there is a degree of uncertainty,which implies that stock return is a random variable. 
+This means that the overall portfolio variance is lower than a simple weighted average of the individual variances
+of the stocks in the portfolio. 
+The formula for portfolio variance in a two-asset portfolio is as follows:
+Portfolio variance = Weights transposed x (Covariance matrix x Weights) 
+Portfolio variance = w12σ12 + w22σ22 + 2w1w2Cov.
+Variance:  σ² = ( (Σ x²) / N ) - μ²
+Variance:  σ² = ( (Σ x²) / N ) - μ²
+The formula for portfolio variance in a two-asset portfolio is as follows:
+Portfolio Variance: w12σ12 + w22σ22 + 2w1w2Cov
+w1 = the portfolio weight of the first asset
+w2 = the portfolio weight of the second asset
+σ1= the standard deviation of the first asset
+σ2 = the standard deviation of the second asset
+Cov1,2 = the covariance of the two assets, which can thus be expressed
+as p(1,2)σ1σ2, where p(1,2) is the correlation coefficient between the two assets
+Certain stock have a small variance, that means, their returns are always close the mean.
+stocks have a high variance and are widely spread around the mean
+
+the variances of the stocks are in the diagonal of the covariance matrix. 
+The variances tell us how much the returns of individual stocks deviate from their mean. 
+----------------------------------------------------------------------------------------------
+Returns Comparision:
+Annual Return: Total return earned over a period of one calendar Year.
+Annualized return: Yearly rate of return inferred from any time period.
+To calculate the annualized portfolio return, divide the final value by the initial value, then raise 
+that number by 1/n, where "n" is the number of years you held the investments. Then, subtract 1 and multiply by 100.
+
+Average Return: Total return realized over a longer period, spread out evenly over the (shorter periods).
+Cumulative(compounding) return: A return that includes the compounded results of reinvesting interest, dividends, and capital gains.
+---------------------------------------------------------------------------------------------------------------
+Risk Adjusted returns
+It defines an investments return by measuring how much risk is involved in producing that return. its ratio.
+
+Sharpe ratio: 
+
+---------------------------------------------------------------------------------------------------------------
+Skewness:
+Skewness is a measure of the symmetry of a distribution. In an asymmetrical distribution a negative skew indicates 
+that the tail on the left side is longer than on the right side (left-skewed),
+ conversely a positive skew indicates the tail on the right side is longer than on the left (right-skewed).
+
+ Pearson's Coefficient of Skewness:
+ Skewness = 3(mean-median)/variance
+ Rule of Thumb:
+Skewness< -1 or Skewness>1 = Highly skewed distribution
+-1 < Skewness< -0.5 or 0.5< Skewness <1 = Moderately skewed distribution
+-0.5 < Skewness< 0.5 = Approximately symmetric distribution
+
+Kurtosis: Fat tailed distribution:
+Higher kurtosis means more of the variance is the result o th infrequent extreme deviations, as opposed to frequent 
+modestly sized deviations.
+
+1. A normal distribution has kurtosis of exactly 3 and is called (mesokurtic)
+2. A distribution with kurtosis <3 is called platykurtic. Tails are shorter and thinner and central peak is lower and broader.
+3. A distribution with kurtosis> 3 is called leptokurtic. Tails are longer and fatter, and central peak is higher and 
+sharper (fat tailed)
+----------------------------------------------------------------------------------------------------------------
+Alternative measures of risk:
+Sortino ratio: Sortino Ratio = (Average Realized Return – Expected Rate of Return) / Downside Risk Deviation
+The Sortino ratio is used to determine the risk-adjusted return on investment.
+It is a refinement of the Sharpe ratio but only penalizes the returns, which have downside risks.
+To measure the Sortino ratio, start by finding the difference between the weighted mean of return and 
+the risk-free return rate. 
+Next, find the quotient between this difference and the standard deviation of downside risks.
+
+----------------------------------------------------------------------------------------------------------------
