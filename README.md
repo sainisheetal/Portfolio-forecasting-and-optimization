@@ -22,8 +22,9 @@ Financial Research: This file contain all my research i have done on this topic.
 
 This Dashboard represent daily price changes. I have used candelstick graph to represent Open price, Close price, Low price & High price. It's very easy to 
 understand for anyone when prices are low and high. Its interactive and client can check data like 1 week, 3 months, 1 year ...so on.
-![Dashboard](https://github.com/sainisheetal/Portfolio-forecasting-and-optimization/blob/main/profile_optimizer/Tableau%20Workbook/Dashboard.png)
+![Dashboard](https://github.com/sainisheetal/Portfolio-forecasting-and-optimization/blob/main/profile_optimizer/Tableau%20Workbook/Dashboard_portfolio%20optimization.png)
 This Dashboard represent complete portfolio to analyse the efficiency (return, volatility, sharpe ratio,...)of different portfolios. Its interactive and client can check data like 1 week, 3 months, 1 year ...so on. Just select the year you will get all data related to it and candel stick represent the Open price, Close price, Low price & High price.
+
 Limits of the project
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Here, Tableau Desktop free version is used which has very limited features. So, using Tableau professional gives more aspects to connect with the
