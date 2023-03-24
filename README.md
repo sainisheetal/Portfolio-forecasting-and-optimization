@@ -3,8 +3,9 @@
 ##The Mission:
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-The mission of this project is to give a client who is interested in creating a paid-tool for clients who want to manage their own investment accounts
-This optimal allocation strategy using most frequently portfolio optimisation methodologies: Mean-variance Optimisation. A user inputs an amount of money they want to invest using a parameter at the top of the dashboard in Tableau, and the Python script calculates the number of shares they should consider buying for each methodology. This is an illustrative example of a portfolio that considers the following crypto  : BitCoin, LiteCoin, Ethereum.
+The mission of this project is to give a Bank client who is interested in creating a paid-tool for their clients who want to manage their own investment accounts.
+To achive this we have to use portfolio optimisation methodologies: Mean-variance Optimisation. 
+A user inputs an amount of money they want to invest using a parameter at the top of the dashboard in Tableau, and the Python script calculates the number of shares they should consider buying for each methodology. This is an illustrative example of a portfolio that considers the following crypto  : BitCoin, LiteCoin, Ethereum.
 Other 3 stock which are as follows: Microsoft, Amazon and Macdonald.
 
 #This repository contains the following directories:
